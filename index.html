@@ -1,43 +1,53 @@
-<!DOCTYPE html>
+div<!DOCTYPE html>
 <html lang="hu">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="description" content="Kerek Perec">
     <title>Kerek Perec</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- Normalize.css -->
     <link rel="stylesheet" href="normalize.css">
+
     <!-- Saját CSS -->
     <link rel="stylesheet" href="style.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo1.png">
+
     <!-- Preload a logóhoz -->
     <link rel="preload" as="image" href="/img/logo3.png">
+
     <script src="script.js" defer></script>
-   
   </head>
   <body>
     <header class="banner"></header>
+
     <div class="container">
       <div class="section section-1">
         <div class="hero">
           <h1>
             <img src="img/logo3.png" alt="Majoros féle erdőhorváti Kerek Perec " class="logo">
           </h1>
+
           <div class="hero-text-container hide-on-desktop">
             <p class="hero-text hero-text__main hide-on-desktop">Erdőhorváti Kerek Perec – 70 éve ugyanazzal a titkos recepttel.</p>
             <p class="hero-text hide-on-desktop">Egy darab múlt, ropogós hagyomány.</p>
           </div>
+
           <div class="hero-buttons hide-on-desktop">
             <a class="button button-primary hide-on-desktop" href="mailto:info@pelda.com">Írj Nekünk!</a>
             <a class="button button-secondary hide-on-desktop" href="#scroll-target">Tudj meg többet!</a>
           </div>
         </div>
-        <div class="details" id="details">
+
+          <div id="scroll-target"></div>
+          <div class="details" id="details">
           <p class="details-text">Az Erdőhorváti Kerek Perec több mint 70 éve, 1950 óta készül változatlan minőségben. Az eredeti recept ma is hétpecsétes titok, amelyet féltve őrzünk.</p>
           <p class="details-text">Ez a kézműves finomság nem csupán egy ropogós perec, hanem egy darab a múltból – egy hagyomány, amelyet generációk óta sütünk itt, Erdőhorvátiban, Nektek. </p>
           <p class="details-text">A Majoros-féle Kerek Perec a hagyomány és a minőség találkozása.</p>
@@ -48,17 +58,19 @@
             <li class="details-list-item">tartósítószer nélkül, ahogy régen is</li>
           </ul>
         </div>
-        </div>
       </div>
+
       <div class="section section-2">
+        <div class="img-container hide-on-mobile">
         <img src="img/rajz.jpg" alt="Kemence" class="kemence hide-on-mobile">
         <img src="img/szlogen.png" alt="Családi hagyomány alapján 1950 óta gyártva" class="szlogen hide-on-mobile">
+        </div>
         <a class="button button-primary" href="mailto:info@pelda.com">Írj Nekünk!</a>
       </div>
     </div>
+
     <footer class="banner">
-      <p>&copy; 2025 Kerek Perec |<a href="impresszum.html">Impresszum</a></p>
+      <p>&copy; 2025 Kerek Perec | <a class="footer-link" href="impresszum.html">Impresszum</a></p>
     </footer>
-   
   </body>
 </html>
