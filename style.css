@@ -1,0 +1,247 @@
+/*----------------------------------------------------*/
+/**BASIC SETTINGS**/
+/*----------------------------------------------------*/
+
+:root {
+    --yellow:               #EAAF0F; 
+    --text-color:           #2B2A29;
+    --background-color:     #FFFFFF; /* white*/
+    --font-size-regular:    clamp(0.875rem, 1vw + 0.5rem, 1.125rem);
+    --line-height-regular:  calc(var(--font-size-regular) * 1.5);
+    --header-height:        2rem;
+    --hero-height:          calc(100vh - var(--header-height) - var(--footer-height)); 
+    --footer-height:        2rem; 
+} 
+
+/* HEADER FOOTER breakpoint asztalra */
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 4.875rem; /* 78px */
+    --footer-height: 4.875rem; /* 78px */
+  }
+}
+
+/* NORMALIZE CSS */
+
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box;
+}
+
+  
+  html, body {
+    width:      100%;
+    overflow-x: hidden;
+  }
+
+
+   body {
+    background-color: var(--background-color);
+   }
+
+/*** TYPOGRAPHY ***/
+
+html {
+  font-size:        16px;
+  color:            var(--text-color);
+  scroll-behavior:  smooth;
+}
+
+  
+  body {
+    width:       100vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-align:  left;
+    font-size:   var(--font-size-regular);
+    line-height: var(--line-height-regular);
+  }
+
+
+    a {
+      text-decoration: none;
+    }
+
+    .hide-on-mobile {
+      display: none;
+  }
+
+/*----------------------------------------------------*/
+/**LAYOUT**/
+/*----------------------------------------------------*/
+.container {
+    
+    width:          90%;
+    margin-top:    var(--header-height);
+    margin-bottom: var(--footer-height);
+    display:       flex;
+    flex-flow:     column nowrap;
+    justify-self: center;
+}
+.section-1 {
+    /*min-height: calc(100vh - var(--header-height) - var(--footer-height));*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+  .hero {
+    /*margin-top: var(--header-height);*/
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    display:   flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    align-items: center;
+   
+  }
+
+    .hero-buttons {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: auto;
+        margin-bottom: var(--footer-height);
+        width: 63%;
+        gap: 1rem;
+        
+    }
+
+  
+
+    .details {
+      margin-bottom:   auto;
+      min-height: calc(100vh- var(--header-height) - var(--footer-height));
+      width: 80%;
+      display:      flex;
+      flex-flow:    column nowrap;
+      background-color: pink;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      gap: var(--line-height-regular);
+    }
+.section-2 {
+    display:         flex;
+    flex-flow:       column nowrap;
+    justify-content: center;
+    align-items:     center;
+    margin-left:     auto;
+    margin-right:    auto;
+    gap:             1.5rem;
+    margin-bottom:   calc(var(--footer-height) + 2rem);
+   /* width:           67%;*/
+}
+
+.kemence, .szlogen {
+    width:       30%;
+    height:      auto;
+    display:     block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+  .hide-on-desktop {
+    display: none;
+  }
+  .container {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  .section-1, .section-2 {
+    width: 30%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section-1 {
+    background-color: pink;
+  }
+  .section-2 {
+    background-color: lightblue;
+  }
+}
+
+  
+
+/*----------------------------------------------------*/
+/**COMPONENTS**/
+/*----------------------------------------------------*/
+
+
+.logo {
+    display: block;
+    margin-top: var(--header-height);
+    width: 65%;
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text-container {
+    width: 65%;
+}
+
+  .hero-text-container > :first-child {
+    font-weight: 600;
+  }
+.banner {
+    background-image: url('img/sarga csik.png'); /* háttérkép */
+    background-size: cover; /* lefedi a teljes header területet */
+    background-position: center; /* középre igazítás */
+    background-repeat: no-repeat; /* ne ismétlődjön a kép */
+   
+}
+
+header {
+    width:          100vw;
+    height:         var(--header-height);
+    position:       fixed;
+    top:            0;
+    left:           0;
+    z-index:        10;
+}
+
+footer {
+    width:          100%;
+    height:         var(--footer-height);
+    position:       fixed;
+    bottom:         0;
+    left:           0;
+    z-index:        10; 
+}
+
+.button {
+  display:        inline-block;
+  width:          100%;
+  border:         0.125rem solid;
+  border-radius:  25px;
+  opacity:        1;
+  padding:        .5rem;
+  text-align:     center;
+  text-transform: uppercase;
+  align-self:     center;
+  
+}
+
+.button-primary {
+    background:   var(--yellow) 0% 0% no-repeat padding-box;
+    border-color: var(--yellow);
+    color:        var(--background-color);
+}
+
+.button-secondary {
+    color:      var(--text-color);
+    border-color: var(--text-color);  
+    background: transparent;
+}
+    
